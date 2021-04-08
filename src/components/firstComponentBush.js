@@ -14,19 +14,19 @@ const anotherState = {
 };
 
 const FirstComponentBush = () => {
-  const [myState, setMyState] = useState(elvenShieldRecipe);
+  const [myState, setMyState] = useState(initialState);
 
   return (
     <div>
       HOLA
       <h3>Current State:</h3>
-      <button onClick={() => setMyState(initialState)}>Elven Shield</button>
+      <button onClick={() => setMyState(initialState)}>Vlad</button>
       <button onClick={() => setMyState(anotherState)}>
         HPE Design
       </button>
 
       <ul>
-        {Object.keys(_prp).map((material) => (
+        {Object.keys(myState).map((material) => (
           <li key={material}>
             {material}: {myState[material]}
           </li>
